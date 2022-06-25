@@ -4,6 +4,7 @@ import net.voxfun.iris.vox.index;
 import net.voxfun.iris.vox.managers.LobbySelector;
 import net.voxfun.iris.vox.managers.PlayerManager;
 import org.bukkit.Bukkit;
+import org.bukkit.GameMode;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -17,6 +18,8 @@ public class JoinListener implements Listener {
             event.setJoinMessage("");
             Bukkit.broadcastMessage(String.format("%s%s has joined the lobby.", PlayerManager.getRank(player.getUniqueId().toString()), player.getName()));
             new LobbySelector(player);
+            player.setGameMode(GameMode.ADVENTURE);
+            player.setInvulnerable(false);
         }
         PlayerManager.join(event.getPlayer().getUniqueId().toString());
     }

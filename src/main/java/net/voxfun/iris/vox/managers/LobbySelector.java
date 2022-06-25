@@ -25,7 +25,7 @@ public class LobbySelector implements Listener {
         }
         ItemStack item = new ItemStack(COMPASS);
         ItemMeta meta = item.getItemMeta();
-        meta.setDisplayName("Server Navigator");
+        meta.setDisplayName( ChatColor.BOLD + "Server Navigator");
         item.setItemMeta(meta);
         player.getInventory().addItem(item);
     }
@@ -59,7 +59,7 @@ public class LobbySelector implements Listener {
         // Init Minigames
         ItemStack RECON = new ItemStack(Material.BOW);
         ItemMeta RECON_META = RECON.getItemMeta();
-        RECON_META.setDisplayName(ChatColor.UNDERLINE + "Recon");
+        RECON_META.setDisplayName(ChatColor.BOLD + "Recon");
         RECON.setItemMeta(RECON_META);
         // Add the minigames to the inventory
         inventory.setItem(0, RECON);

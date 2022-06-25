@@ -11,6 +11,7 @@ import net.voxfun.iris.vox.commands.TabCompletion;
 import net.voxfun.iris.vox.listeners.ChatListener;
 import net.voxfun.iris.vox.listeners.JoinListener;
 import net.voxfun.iris.vox.listeners.LeaveListener;
+import net.voxfun.iris.vox.listeners.PlayerMoveListener;
 import net.voxfun.iris.vox.managers.LobbySelector;
 import net.voxfun.iris.vox.managers.ReadJsonURL;
 import org.bukkit.Bukkit;
@@ -61,6 +62,7 @@ public final class index extends JavaPlugin {
         checkVersion();
         if (isMainLobby) {
             getServer().getPluginManager().registerEvents(new LobbySelector(null), this);
+            getServer().getPluginManager().registerEvents(new PlayerMoveListener(), this);
         }
     }
 
