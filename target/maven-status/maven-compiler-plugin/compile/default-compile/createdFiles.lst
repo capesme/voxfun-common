@@ -1,0 +1,14 @@
+net\voxfun\iris\vox\managers\PlayerManager.class
+net\voxfun\iris\vox\listeners\PlayerMoveListener.class
+net\voxfun\iris\vox\commands\TabCompletion.class
+net\voxfun\iris\vox\listeners\LeaveListener.class
+net\voxfun\iris\vox\listeners\PlayerActionListener.class
+net\voxfun\iris\vox\listeners\ChatListener.class
+net\voxfun\iris\vox\listeners\JoinListener.class
+net\voxfun\iris\vox\commands\CapesMeCommand.class
+net\voxfun\iris\vox\managers\LobbySelector.class
+net\voxfun\iris\vox\commands\LobbyCommand.class
+net\voxfun\iris\vox\managers\RandomId.class
+net\voxfun\iris\vox\managers\ReadJsonURL.class
+net\voxfun\iris\vox\commands\PlayCommand.class
+net\voxfun\iris\vox\index.class
