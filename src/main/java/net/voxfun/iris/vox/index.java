@@ -58,11 +58,11 @@ public final class index extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new ChatListener(), this);
         getServer().getPluginManager().registerEvents(new JoinListener(), this);
         getServer().getPluginManager().registerEvents(new LeaveListener(), this);
-        getServer().getPluginManager().registerEvents(new PlayerMoveListener(this), this);
         loadDb();
         checkVersion();
         if (isMainLobby) {
             getServer().getPluginManager().registerEvents(new LobbySelector(null), this);
+            getServer().getPluginManager().registerEvents(new PlayerMoveListener(), this);
         }
     }
 

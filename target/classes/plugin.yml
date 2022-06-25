@@ -1,5 +1,5 @@
 name: Voxfun
-version: '${project.version}'
+version: '1.0-SNAPSHOT'
 main: net.voxfun.iris.vox.index
 api-version: 1.15
 prefix: [ VoxFun ]
