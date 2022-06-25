@@ -14,6 +14,7 @@ public class PlayerMoveListener implements Listener{
     public void onPlyerWalk(PlayerMoveEvent event) {
         Player p = event.getPlayer();
         if (index.isMainLobby) {
+            
             Location blockUnder = p.getLocation();
             blockUnder.setY(blockUnder.getY() - 1);
             if (p.getLocation().getBlock().getType().equals((Material.LIGHT_WEIGHTED_PRESSURE_PLATE)) && blockUnder.getBlock().getType().equals(Material.JACK_O_LANTERN)) {
