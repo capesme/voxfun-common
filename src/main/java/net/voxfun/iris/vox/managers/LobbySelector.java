@@ -2,6 +2,7 @@ package net.voxfun.iris.vox.managers;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -20,12 +21,13 @@ public class LobbySelector implements Listener {
         if (player == null) return;
         for (int i = 0; i < player.getInventory().getContents().length; i++) {
             if (player.getInventory().getItem(i) != null) {
-                if (player.getInventory().getItem(i).getItemMeta().getDisplayName().equalsIgnoreCase("server navigator")) return;
+                if (player.getInventory().getItem(i).getItemMeta().getDisplayName().equalsIgnoreCase("server navigator"))
+                    return;
             }
         }
         ItemStack item = new ItemStack(COMPASS);
         ItemMeta meta = item.getItemMeta();
-        meta.setDisplayName( ChatColor.BOLD + "Server Navigator");
+        meta.setDisplayName(ChatColor.BOLD + "Server Navigator");
         item.setItemMeta(meta);
         player.getInventory().addItem(item);
     }
@@ -47,10 +49,11 @@ public class LobbySelector implements Listener {
         if (event.getClickedInventory().getSize() > 9) return;
         Player player = (Player) event.getWhoClicked();
         event.setCancelled(true);
-        if (event.getCurrentItem() == null || event.getCurrentItem().getType() == Material.AIR || !event.getCurrentItem().hasItemMeta()) return;
+        if (event.getCurrentItem() == null || event.getCurrentItem().getType() == Material.AIR || !event.getCurrentItem().hasItemMeta())
+            return;
         if (event.getCurrentItem().getType() == Material.BOW && event.isLeftClick()) {
             //Sends to the Recon game room
-            
+
             Location recon = new Location(Bukkit.getWorld("world"), -0.5, 161, 127.5, 0, 0);
             player.teleport(recon);
 
@@ -68,22 +71,23 @@ public class LobbySelector implements Listener {
 
         if (event.getCurrentItem().getType() == Material.BOW && event.isShiftClick()) {
             //Sends them to available Recon lobby
-        if (event.getCurrentItem().getType() == Material.BOW) {
-            player.performCommand("play recon");
-            player.closeInventory();
+            if (event.getCurrentItem().getType() == Material.BOW) {
+                player.performCommand("play recon");
+                player.closeInventory();
+            }
         }
-    }
 
-    private static void openGUI(Player player) {
-        Inventory inventory = Bukkit.createInventory(null, 9, ChatColor.UNDERLINE + "Server Navigator");
-        // Init Minigames
-        ItemStack RECON = new ItemStack(Material.BOW);
-        ItemMeta RECON_META = RECON.getItemMeta();
-        RECON_META.setDisplayName(ChatColor.BOLD + "Recon");
-        RECON.setItemMeta(RECON_META);
-        // Add the minigames to the inventory
-        inventory.setItem(0, RECON);
-        // Open the inventory
-        player.openInventory(inventory);
+        private static void openGUI (Player player){
+            Inventory inventory = Bukkit.createInventory(null, 9, ChatColor.UNDERLINE + "Server Navigator");
+            // Init Minigames
+            ItemStack RECON = new ItemStack(Material.BOW);
+            ItemMeta RECON_META = RECON.getItemMeta();
+            RECON_META.setDisplayName(ChatColor.BOLD + "Recon");
+            RECON.setItemMeta(RECON_META);
+            // Add the minigames to the inventory
+            inventory.setItem(0, RECON);
+            // Open the inventory
+            player.openInventory(inventory);
+        }
     }
 }

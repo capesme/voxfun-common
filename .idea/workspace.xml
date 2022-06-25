@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ae8dcf10-46a7-48b6-99a5-5a67905d1844" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/target/classes/net/voxfun/iris/vox/index.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/voxfun/iris/vox/index.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/voxfun/iris/vox/listeners/JoinListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/voxfun/iris/vox/listeners/JoinListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/voxfun/iris/vox/listeners/PlayerMoveListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/voxfun/iris/vox/listeners/PlayerMoveListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/voxfun/iris/vox/managers/LobbySelector.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/voxfun/iris/vox/managers/LobbySelector.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/voxfun/iris/vox/index.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/voxfun/iris/vox/index.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/voxfun/iris/vox/listeners/JoinListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/voxfun/iris/vox/listeners/JoinListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/voxfun/iris/vox/listeners/PlayerMoveListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/voxfun/iris/vox/listeners/PlayerMoveListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/voxfun/iris/vox/managers/LobbySelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/voxfun/iris/vox/managers/LobbySelector.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
