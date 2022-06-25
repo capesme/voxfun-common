@@ -15,6 +15,7 @@ public class JoinListener implements Listener {
     @EventHandler
     public static void onJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
+        
         if (index.isMainLobby) {
             event.setJoinMessage("");
             Bukkit.broadcastMessage(String.format("%s%s has joined the lobby.", PlayerManager.getRank(player.getUniqueId().toString()), player.getName()));

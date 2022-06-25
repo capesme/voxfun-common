@@ -58,6 +58,7 @@ public final class index extends JavaPlugin {
         loadDb();
         checkVersion();
         if (isMainLobby) {
+            
             getServer().getPluginManager().registerEvents(new LobbySelector(null), this);
             getServer().getPluginManager().registerEvents(new PlayerMoveListener(), this);
             getServer().getPluginManager().registerEvents(new PlayerActionListener(), this);

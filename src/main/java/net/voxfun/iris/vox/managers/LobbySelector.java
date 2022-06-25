@@ -54,6 +54,7 @@ public class LobbySelector implements Listener {
 
         if (event.getCurrentItem().getType() == Material.BOW && event.isLeftClick()) {
             //Sends to the Recon game room
+            
             Location recon = new Location(Bukkit.getWorld("world"), -0.5, 161, 127.5, 0, 0);
             player.teleport(recon);
 
@@ -62,6 +63,7 @@ public class LobbySelector implements Listener {
 
         if (event.getCurrentItem().getType() == Material.BOW && event.isRightClick()) {
             //Sends to the Recon game room
+
             Location recon = new Location(Bukkit.getWorld("world"), -0.5, 161, 127.5, 0, 0);
             player.teleport(recon);
 
@@ -69,6 +71,8 @@ public class LobbySelector implements Listener {
         }
 
         if (event.getCurrentItem().getType() == Material.BOW && event.isShiftClick()) {
+            //Sends them to available Recon lobby
+
             player.performCommand("play recon");
             player.closeInventory();
         }
