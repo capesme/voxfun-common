@@ -12,20 +12,45 @@ import org.bukkit.event.player.PlayerMoveEvent;
 public class PlayerMoveListener implements Listener{
     @EventHandler
     public void onPlyerWalk(PlayerMoveEvent event) {
-        Player p = event.getPlayer();
+        Player player = event.getPlayer();
         if (index.isMainLobby) {
 
-            Location blockUnder = p.getLocation();
+            Location blockUnder = player.getLocation();
             blockUnder.setY(blockUnder.getY() - 1);
-            if (p.getLocation().getBlock().getType().equals((Material.LIGHT_WEIGHTED_PRESSURE_PLATE)) && blockUnder.getBlock().getType().equals(Material.JACK_O_LANTERN)) {
-                p.setVelocity(p.getLocation().getDirection().multiply(3).setY(0.7));
-                p.playSound(p.getLocation(), Sound.ENTITY_WOLF_SHAKE, 10, 1);
+            if (player.getLocation().getBlock().getType().equals((Material.LIGHT_WEIGHTED_PRESSURE_PLATE)) && blockUnder.getBlock().getType().equals(Material.JACK_O_LANTERN)) {
+                player.setVelocity(player.getLocation().getDirection().multiply(3).setY(0.7));
+                player.playSound(player.getLocation(), Sound.ENTITY_WOLF_SHAKE, 10, 1);
             }
-            if (p.getLocation().getBlock().getType().equals((Material.LIGHT_WEIGHTED_PRESSURE_PLATE)) && blockUnder.getBlock().getType().equals(Material.STRUCTURE_BLOCK)) {
-                p.setVelocity(p.getLocation().getDirection().multiply(7).setY(2));
-                p.setVelocity(p.getLocation().getDirection().multiply(3).setY(1));
-                p.playSound(p.getLocation(), Sound.ENTITY_WOLF_SHAKE, 10, 1);
+            if (player.getLocation().getBlock().getType().equals((Material.LIGHT_WEIGHTED_PRESSURE_PLATE)) && blockUnder.getBlock().getType().equals(Material.STRUCTURE_BLOCK)) {
+                player.setVelocity(player.getLocation().getDirection().multiply(7).setY(2));
+                player.setVelocity(player.getLocation().getDirection().multiply(3).setY(1));
+                player.playSound(player.getLocation(), Sound.ENTITY_WOLF_SHAKE, 10, 1);
             }
+
+            if (blockUnder.getBlock().getType().equals(Material.CYAN_TERRACOTTA)) {
+                blockUnder.getBlock().setType(Material.BLUE_TERRACOTTA);
+                }
+            if (blockUnder.getBlock().getType().equals(Material.BLUE_TERRACOTTA)) {
+                blockUnder.getBlock().setType(Material.PURPLE_TERRACOTTA);
+            }
+            if (blockUnder.getBlock().getType().equals(Material.PURPLE_TERRACOTTA)) {
+                blockUnder.getBlock().setType(Material.MAGENTA_TERRACOTTA);
+            }
+            if (blockUnder.getBlock().getType().equals(Material.MAGENTA_TERRACOTTA)) {
+                blockUnder.getBlock().setType(Material.PINK_TERRACOTTA);
+            }
+            if (blockUnder.getBlock().getType().equals(Material.PINK_TERRACOTTA)) {
+                blockUnder.getBlock().setType(Material.RED_TERRACOTTA);
+            }
+            if (blockUnder.getBlock().getType().equals(Material.RED_TERRACOTTA)) {
+                blockUnder.getBlock().setType(Material.ORANGE_TERRACOTTA);
+            }
+            if (blockUnder.getBlock().getType().equals(Material.ORANGE_TERRACOTTA)) {
+                blockUnder.getBlock().setType(Material.YELLOW_TERRACOTTA);
+            }
+            if (blockUnder.getBlock().getType().equals(Material.YELLOW_TERRACOTTA)) {
+            }
+
         }
     }
 }

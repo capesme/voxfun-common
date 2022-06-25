@@ -1,3 +1,4 @@
+
 package net.voxfun.iris.vox.managers;
 
 import org.bukkit.Bukkit;
@@ -11,6 +12,7 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.InventoryHolder;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
@@ -27,7 +29,7 @@ public class LobbySelector implements Listener {
         }
         ItemStack item = new ItemStack(COMPASS);
         ItemMeta meta = item.getItemMeta();
-        meta.setDisplayName(ChatColor.BOLD + "Server Navigator");
+        meta.setDisplayName("Server Navigator");
         item.setItemMeta(meta);
         player.getInventory().addItem(item);
     }
@@ -76,18 +78,16 @@ public class LobbySelector implements Listener {
                 player.closeInventory();
             }
         }
+    }
 
-        private static void openGUI (Player player){
-            Inventory inventory = Bukkit.createInventory(null, 9, ChatColor.UNDERLINE + "Server Navigator");
-            // Init Minigames
+        private static void openGUI(Player player) {
+            Inventory inventory = Bukkit.createInventory((InventoryHolder)null, 9, ChatColor.UNDERLINE + "Server Navigator");
             ItemStack RECON = new ItemStack(Material.BOW);
             ItemMeta RECON_META = RECON.getItemMeta();
             RECON_META.setDisplayName(ChatColor.BOLD + "Recon");
             RECON.setItemMeta(RECON_META);
-            // Add the minigames to the inventory
             inventory.setItem(0, RECON);
-            // Open the inventory
             player.openInventory(inventory);
         }
     }
-}
+

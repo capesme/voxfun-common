@@ -5,19 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ae8dcf10-46a7-48b6-99a5-5a67905d1844" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/voxfun/iris/vox/listeners/PlayerActionListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/voxfun/iris/vox/index.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/voxfun/iris/vox/index.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/voxfun/iris/vox/listeners/JoinListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/voxfun/iris/vox/listeners/JoinListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/voxfun/iris/vox/listeners/PlayerMoveListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/voxfun/iris/vox/listeners/PlayerMoveListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/voxfun/iris/vox/managers/LobbySelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/voxfun/iris/vox/managers/LobbySelector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/voxfun/iris/vox/commands/CapesMeCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/voxfun/iris/vox/commands/CapesMeCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/voxfun/iris/vox/commands/LobbyCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/voxfun/iris/vox/commands/LobbyCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/voxfun/iris/vox/commands/PlayCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/voxfun/iris/vox/commands/PlayCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/voxfun/iris/vox/commands/TabCompletion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/voxfun/iris/vox/commands/TabCompletion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/voxfun/iris/vox/index.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/voxfun/iris/vox/index.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/voxfun/iris/vox/listeners/ChatListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/voxfun/iris/vox/listeners/ChatListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/voxfun/iris/vox/listeners/JoinListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/voxfun/iris/vox/listeners/JoinListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/voxfun/iris/vox/listeners/LeaveListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/voxfun/iris/vox/listeners/LeaveListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/voxfun/iris/vox/listeners/PlayerMoveListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/voxfun/iris/vox/listeners/PlayerMoveListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/voxfun/iris/vox/managers/LobbySelector.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/voxfun/iris/vox/managers/LobbySelector.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/voxfun/iris/vox/managers/PlayerManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/voxfun/iris/vox/managers/PlayerManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/voxfun/iris/vox/managers/RandomId.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/voxfun/iris/vox/managers/RandomId.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/voxfun/iris/vox/managers/ReadJsonURL.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/voxfun/iris/vox/managers/ReadJsonURL.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -27,6 +51,9 @@
     </option>
   </component>
   <component name="ProjectId" id="2B3fwlsCgSmyujRfiMnnfTrSe24" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -37,6 +64,34 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="vox [clean,package]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="package" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
