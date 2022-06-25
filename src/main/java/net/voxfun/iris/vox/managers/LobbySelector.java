@@ -2,6 +2,7 @@ package net.voxfun.iris.vox.managers;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -13,6 +14,8 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
+import java.util.ArrayList;
+
 import static org.bukkit.Material.COMPASS;
 
 public class LobbySelector implements Listener {
@@ -20,13 +23,12 @@ public class LobbySelector implements Listener {
         if (player == null) return;
         for (int i = 0; i < player.getInventory().getContents().length; i++) {
             if (player.getInventory().getItem(i) != null) {
-                if (player.getInventory().getItem(i).getItemMeta().getDisplayName().equalsIgnoreCase("server navigator")) return;
+                if (player.getInventory().getItem(i).getItemMeta().getDisplayName().equalsIgnoreCase("§fserver navigator")) return;
             }
         }
         ItemStack item = new ItemStack(COMPASS);
         ItemMeta meta = item.getItemMeta();
-        meta.setDisplayName( ChatColor.BOLD + "Server Navigator");
-        item.setItemMeta(meta);
+        meta.setDisplayName("§fServer Navigator");
         player.getInventory().addItem(item);
     }
 
@@ -36,7 +38,7 @@ public class LobbySelector implements Listener {
         ItemStack item = event.getItem();
         if (a == Action.PHYSICAL || item == null || item.getType() == Material.AIR) return;
         if (a == Action.RIGHT_CLICK_AIR || a == Action.RIGHT_CLICK_BLOCK) {
-            if (item.getType() == COMPASS && item.getItemMeta().getDisplayName().equalsIgnoreCase("server navigator")) {
+            if (item.getType() == COMPASS && item.getItemMeta().getDisplayName().equalsIgnoreCase("§fserver navigator")) {
                 openGUI(event.getPlayer());
             }
         }
@@ -48,7 +50,25 @@ public class LobbySelector implements Listener {
         Player player = (Player) event.getWhoClicked();
         event.setCancelled(true);
         if (event.getCurrentItem() == null || event.getCurrentItem().getType() == Material.AIR || !event.getCurrentItem().hasItemMeta()) return;
-        if (event.getCurrentItem().getType() == Material.BOW) {
+
+
+        if (event.getCurrentItem().getType() == Material.BOW && event.isLeftClick()) {
+            //Sends to the Recon game room
+            Location recon = new Location(Bukkit.getWorld("world"), -0.5, 161, 127.5, 0, 0);
+            player.teleport(recon);
+
+            player.closeInventory();
+        }
+
+        if (event.getCurrentItem().getType() == Material.BOW && event.isRightClick()) {
+            //Sends to the Recon game room
+            Location recon = new Location(Bukkit.getWorld("world"), -0.5, 161, 127.5, 0, 0);
+            player.teleport(recon);
+
+            player.closeInventory();
+        }
+
+        if (event.getCurrentItem().getType() == Material.BOW && event.isShiftClick()) {
             player.performCommand("play recon");
             player.closeInventory();
         }
